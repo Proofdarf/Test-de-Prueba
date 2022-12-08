@@ -11,15 +11,20 @@
 let arr = ["foo","bar","baz","qux","echo"];
 let result = [];
 
-    arr.splice(0,1);
-    arr.splice(3,1);
+let i=1;
+for (; i < arr.length - 1; i++) {
+    result.push(arr[i]);
+  }
 
-    result.push(arr[0].replace("a","@"))
-    result.push(arr[1].replace("a","@"))
-    result.push(arr[2].toUpperCase())
+let j=0;
+for (; j < 2; j++) {
+    result[j] = result[j].replace("a", "@");
+  }
+  
+result[result.length - 1] = result[result.length - 1].toUpperCase();
 
 
-    console.log(result);
+console.log(result);
 
     
 
